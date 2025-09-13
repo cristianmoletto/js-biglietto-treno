@@ -36,12 +36,18 @@ const kmStr = prompt(
   "Inserisci i chilometri che vuoi percorrere, con un valore numerico"
 );
 
-if (isNaN(ageStr) || isNaN(kmStr)) {
+if (ageStr.includes(",") == true || kmStr.includes(",") == true ) {
+  console.log("Inserisci i decimali con il punto, non con la virgola");
+
+}
+  else if (isNaN(ageStr) || isNaN(kmStr)) {
   console.log("Inserisci solo numeri!");
+  
 
 } else if (ageStr == undefined || kmStr == undefined) {
   console.log("Inserisci dei valori validi");
-  
+
+
 } else {
   const age = parseInt(ageStr);
   const km = parseFloat(kmStr);
