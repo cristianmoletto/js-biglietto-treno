@@ -38,6 +38,10 @@ const kmStr = prompt(
 
 if (isNaN(ageStr) || isNaN(kmStr)) {
   console.log("Inserisci solo numeri!");
+
+} else if (ageStr == undefined || kmStr == undefined) {
+  console.log("Inserisci dei valori validi");
+  
 } else {
   const age = parseInt(ageStr);
   const km = parseFloat(kmStr);
