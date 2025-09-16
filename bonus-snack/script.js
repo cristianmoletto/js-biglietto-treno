@@ -122,52 +122,60 @@ function calcoloScontrino() {
   const product = prompt("Scrivi il prodotto esatto: 'pane', 'latte' o 'uova'");
 
   if (product == "pane" || product == "latte" || product == "uova") {
+    
     // richiesta delle informazioni all'utente: quantità
     const unit = prompt("Scrivi in numeri la quantità da 1 a 99");
 
+    // in caso di quantità nn corrette
     if (isNaN(unit) || unit == null) {
       console.log(
         "Scrivi un numero a caratteri numerici! Ricarica la pagina e riprova."
       );
-    }
-
-    // richiesta della tessera fedeltà
-
-    const tessera = prompt(
-      "Se hai la tessera scrivi 'Y', se non ce l'hai scrivi 'N'"
-    );
-
-    if (tessera == "Y" || tessera == "N") {
-      // inizializza i valori
-      const unitParsed = parseInt(unit);
-      let unitPrice = 0;
-
-      // in base al prodotto, applica il prezzo
-      if (product == "pane") {
-        unitPrice = 1.5;
-      } else if (product == "uova") {
-        unitPrice = 2.6;
-      } else if (product == "latte") {
-        unitPrice = 1.2;
-      }
-
-      // Calcolo costo e quantità
-      const wholePrice = unitPrice * unitParsed;
-      let totalPrice = 0;
-
-      // sconto tessera fedeltà
-      if (wholePrice >= 20 && tessera == "Y") {
-        totalPrice = wholePrice - wholePrice * 0.1;
-      } else if (wholePrice < 20 && tessera == "Y") {
-        totalPrice = wholePrice - wholePrice * 0.05;
-      } else {
-        totalPrice = wholePrice;
-      }
-
-      // stampa del totale
-      console.log(`Il totale è ${totalPrice.toFixed(2)}€`);
     } else {
-      ("Devi scrivere esattamente Y se hai la tessera o N se non ce l'hai. Ricarica la pagina e riprova.");
+      // richiesta della tessera fedeltà
+
+      const tessera = prompt(
+        "Se hai la tessera scrivi 'Y', se non ce l'hai scrivi 'N'"
+      );
+
+      if (tessera == "Y" || tessera == "N") {
+        // inizializza i valori
+        const unitParsed = parseInt(unit);
+        let unitPrice = 0;
+
+        // in base al prodotto, applica il prezzo
+        if (product == "pane") {
+          unitPrice = 1.5;
+
+        } else if (product == "uova") {
+          unitPrice = 2.6;
+
+        } else if (product == "latte") {
+          unitPrice = 1.2;
+        }
+
+        // Calcolo costo e quantità
+        const wholePrice = unitPrice * unitParsed;
+        let totalPrice = 0;
+
+        // sconto tessera fedeltà
+        if (wholePrice >= 20 && tessera == "Y") {
+          totalPrice = wholePrice - wholePrice * 0.1;
+
+        } else if (wholePrice < 20 && tessera == "Y") {
+          totalPrice = wholePrice - wholePrice * 0.05;
+
+        } else {
+          totalPrice = wholePrice;
+        }
+
+        // stampa del totale
+        console.log(`Il totale è ${totalPrice.toFixed(2)}€`);
+
+        // in caso di tessera non corretta
+      } else {
+        ("Devi scrivere esattamente Y se hai la tessera o N se non ce l'hai. Ricarica la pagina e riprova.");
+      }
     }
 
     // in caso di prodotto non corretto
