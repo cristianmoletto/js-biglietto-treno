@@ -1,0 +1,34 @@
+Modalità di consegna:
+Nella vostra ultima repo (js-biglietto-treno) create la cartella bonus e implementate le vostre soluzioni lì. 
+
+Esercizi:
+
+1️⃣
+Chiedi due numeri all’utente e poi chiedi se vuole "somma" o "differenza".
+Stampa il risultato corrispondente.
+
+2️⃣
+Chiedi all'utente la sua età e comunichiamo l'anno di nascita.
+
+3️⃣
+Chiedi all'utente il suo nome e stampa in console la stringa "ciao <nome_utente>".
+
+4️⃣
+Chiedi all’utente il suo nome, poi chiedi il suo cognome, poi chiedi il suo colore preferito
+Infine scrivi sulla pagina nomecognomecolorepreferito23
+
+5️⃣ 
+Scrivi un programma che simula l’acquisto al minimarket.
+
+Chiedi all’utente quale prodotto vuole acquistare:
+"pane" → €1.50
+"latte" → €1.20
+"uova" → €2.60
+
+Chiedi quante unità vuole acquistare.
+
+Chiedi se possiede la tessera fedeltà ("si" o "no"). Se sì calcola lo sconto in base a queste regole:
+Totale < 20€ → sconto 5%
+Totale ≥ 20€ → sconto 10%
+
+Stampa in console uno scontrino
